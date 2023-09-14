@@ -1,0 +1,48 @@
+@mixin minMedium {
+    @media (min-width:992px) {
+       @content 
+    }
+};
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+@mixin  overlay {
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+//auto add prefixes to properties
+
+@mixin prefix($pro,$value,$prefixes) {
+    @each $prefix in $prefixes    
+    {     
+        #{'-'+ $prefix +'-'+ $pro}:$value ;
+    }
+    #{$pro}:$value;
+}
+
+//auto add prefixes to Animation
+@mixin anima ($animation-name){
+    @-webkit-keyframes #{$animation-name}{
+        @content;
+    }
+    @-moz-keyframes #{$animation-name}{
+        @content;
+    }
+    @keyframes #{$animation-name}{
+        @content;
+    }
+    
+}

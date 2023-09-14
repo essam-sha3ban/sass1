@@ -1,0 +1,14 @@
+@use "../helpers/variable" as*;
+.btn{
+   background-color: rgba($redColor , .8); 
+   color: #fff;
+   padding: 10px 15px;
+   text-align: center;
+   min-width: 120px;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 22px;
+   &:hover{
+    background-color: $redColor
+   }
+}

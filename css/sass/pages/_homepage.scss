@@ -1,0 +1,160 @@
+@use "../helpers/variable" as*;
+@use "../helpers/mixin" as*;
+
+*{
+    @include reset  
+  }
+
+.slider{
+    blockquote{
+        font:{
+            style: italic;
+            size: 20px;
+            weight: bold;
+
+        }
+      width: 70%;
+      line-height: 1.7;
+      margin: 30px auto;
+      color: #6a6969;
+      text-align: center;
+
+    }
+    img{
+        width: 100%;
+        margin: 0 auto
+    }
+    .bullets{
+        text-align: center;
+        li{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $garyColor;
+            border: 3px solid $garyColor;
+            cursor: pointer;
+            &.active,&:hover{
+                background-color: #fff;
+                border: 3px solid #333;
+            }
+
+        }
+    }
+}
+
+//start services
+.services{
+    margin: 30px 0;
+    .service-box{
+        
+       @media #{$minMedium} {
+        float: $float-left;
+        width: (100% / 3);  
+        padding-right: 20px;
+       }  
+       @media #{$maxMob} {       
+        margin-bottom: 15px; 
+        } 
+        @media #{$minSmall} {       
+            margin-bottom: 15px; 
+            }
+           
+        h3{
+            color: #666;
+              
+            i{
+                font-size: 30px;
+                margin-right: 7px;
+                position: relative;
+                top: 3px;
+                @media #{$maxMob} {
+                   display: block;
+                   margin-bottom: 15px; 
+                }
+            }
+        }
+        p{
+            color:#777 ;
+            margin: 7px 0;
+        }
+        a{
+            color: $redColor;
+        }
+    }
+}
+//end services
+//start players
+.players{
+    margin: 30px 0;
+    .container{
+   
+       
+        .player{
+            @media #{$maxMob} {
+                width: 100% ;
+             }
+            margin-bottom: 20px;
+             @media #{$minSmall} {
+                width: (100% / 2);
+                float: $float-left;           
+                padding-right: 20px;
+             }
+             @media #{$minMedium} {
+                width: (100% / 3);
+                float: $float-left;           
+                padding-right: 20px;
+             }
+             @media #{$minLarge} {
+                width: (100% / 4);
+                float: $float-left;           
+                padding-right: 20px;
+             }
+
+            img {
+                width: 100%;
+              
+            }
+        h3{
+            color: #666;
+              
+            span{
+                font-weight: bold;
+                color: black;
+            }
+        }
+        p{
+            color:#777 ;
+            margin: 7px 0;
+           max-width: 100%;
+        }
+        a{
+            color: $redColor;
+        }
+    }
+    }
+
+}
+//end services
+
+//start lorem 
+.lorem{
+margin-bottom: 30px;
+    .lorem-box{
+        float: $float-left;
+        width: (94% / 3);
+        @media #{$maxMob} {
+            width: 100%;
+            margin-bottom: 15px;
+            
+        }
+        &:not(:last-of-type){
+            margin-right: 3%;
+        }
+        img{
+           max-width:100%;
+        }
+    }
+}
+
+//end lorem 
